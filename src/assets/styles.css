@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {@apply bg-darkBlack}
+.full { @apply w-full h-full }
+
+html, body, #app { @apply full }
+
+.full{font-family: 'Outfit', sans-serif;}
+
+#app { @apply bg-darkBlack text-white flex flex-col}
+
+.center { @apply flex justify-center items-center }
+
+.modal-bg { @apply fixed top-0 left-0 w-full h-full flex justify-center items-center bg-overlayBlack }
+.modal { @apply w-[35%] relative bg-black text-white text-lg p-12 flex flex-col items-center rounded-2xl gap-10}
+
+
+.view { @apply w-full h-full}
+.page { @apply w-full h-full flex flex-col overflow-y-auto bg-darkBlack }
