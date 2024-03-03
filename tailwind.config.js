@@ -18,7 +18,8 @@ module.exports = {
       'lowGreen': '#61bc84',
       'lowerGreen': '#8FBC8F',
       'lightGreen': '#c6ffe6',
-      'overlayGreen': '#345e3748'
+      'overlayGreen': '#345e3748',
+      'blue':'#4e88ca'
     }
   },
   plugins: []
