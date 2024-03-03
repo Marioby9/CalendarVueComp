@@ -1,7 +1,52 @@
 {
-    "events": [
-      {
-        
-      }
-    ]
-  }
+  "events": [
+    {
+      "id": "8a91",
+      "title": "Empresa",
+      "description": "Recuperación Empresa",
+      "date": "22/3/2024",
+      "startTime": "20:43",
+      "color": "#fbf550"
+    },
+    {
+      "id": "b938",
+      "title": "Prueba Drag",
+      "description": "Drag and drop",
+      "date": "7/3/2024",
+      "startTime": "23:16",
+      "color": "#61bc84"
+    },
+    {
+      "id": "48a8",
+      "title": "Evento Nuevo",
+      "description": "Cumpleaños",
+      "date": "8/3/2024",
+      "startTime": "23:06",
+      "color": "#ff78d2"
+    },
+    {
+      "id": "1f29",
+      "title": "Cambiado",
+      "description": "Eventillo",
+      "date": "6/3/2024",
+      "startTime": "22:00",
+      "color": "#ff6a00"
+    },
+    {
+      "id": "9e96",
+      "title": "E1",
+      "description": "E1",
+      "date": "5/3/2024",
+      "startTime": "12:02",
+      "color": "#61bc84"
+    },
+    {
+      "id": "aee9",
+      "title": "E3",
+      "description": "Hola",
+      "date": "13/3/2024",
+      "startTime": "04:02",
+      "color": "#4e88ca"
+    }
+  ]
+}

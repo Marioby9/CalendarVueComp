@@ -23,6 +23,7 @@ const prevMonth = () => {
     else{
         currentMonth.value--
     }
+    
 }
 const nextMonth = () => {
     
@@ -48,6 +49,12 @@ const nextMonth = () => {
                 <button class="rounded-full p-2 w-12 hover:bg-lightGreen" @click="prevMonth"><font-awesome-icon icon="fa-chevron-left"/></button>
                 <button class="rounded-full p-2 w-12 hover:bg-lightGreen" @click="nextMonth"><font-awesome-icon icon="fa-chevron-right"/></button>
             </div>
+        </div>
+        <div class="flex text-black">
+            <select v-model="currentMonth">
+                <option v-for="(elm, ind) in months" :value="ind" :key="ind">{{ elm }}</option>
+            </select>
+            <input type="number" v-model="currentYear">
         </div>
         <Calendar :month="currentMonth" :year="currentYear" />
     </div>
