@@ -16,6 +16,7 @@
    </div>
    <EventsComp 
      @editEvent="editEvent"
+     @showEvent="showEvent"
      @dragStartEvent="dragStart" 
      :events="events.filter(elm => elm.date === props.date)" />
   </div>
@@ -33,7 +34,7 @@ const props = defineProps<{
  date?: string;
 }>()
 
-const emit = defineEmits(['addEvent', 'editEvent', 'dragStartEvent', 'dropEvent'])
+const emit = defineEmits(['addEvent', 'editEvent', 'showEvent', 'dragStartEvent', 'dropEvent'])
 
 const getDay = () => props.date?.split('/')[0]
 
@@ -53,6 +54,10 @@ const currentDateFormatted = getFormattedDate()
 
 const editEvent = (event: Event) => {
  emit('editEvent', event)
+}
+
+const showEvent = (event: Event) => {
+ emit('showEvent', event)
 }
 
 onMounted(async () => {

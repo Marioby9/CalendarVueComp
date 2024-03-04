@@ -91,7 +91,20 @@ onMounted(() => {
                 <p>Hora del Evento</p>
                 <p>Color</p>
             </div>
-            <div class="flex flex-col gap-6 w-1/2 text-darkBlack">
+            <div class="flex flex-col gap-6 w-1/2 text-white" v-if="props.state=='show'">
+                <p>{{ props.currentEvent?.title }}</p>
+                <p>{{ props.currentEvent?.description }}</p>
+                <p>{{ props.currentEvent?.startTime }}</p>
+                <div class="w-full flex items-center h-fit justify-between">
+                  <div v-for="(col, indx) in colors" :key="indx" 
+                    class="p-3 rounded-full cursor-pointer border-4 " 
+                    :class="[selectedColor === col ? ' border-white' : 'border-black']"
+                    :style="{ backgroundColor: col }"
+                    >
+                  </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 w-1/2 text-darkBlack" v-else >
                 <input type="text" class="w-full rounded-lg px-2" v-model="title">
                 <input type="text" class="w-full rounded-lg px-2" v-model="description">
                 <input type="time" class="w-full rounded-lg px-2" v-model="startTime">
@@ -105,6 +118,7 @@ onMounted(() => {
                   </div>
                 </div>
             </div>
+            
         </div>
         <p>Se agregará al día {{ props.date }}</p>
         <p v-if="isError" class="underline">Error. Hay campos incompletos</p>

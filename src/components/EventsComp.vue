@@ -5,7 +5,7 @@
          :draggable="true"
          @dragstart="emit('dragStartEvent', props.events[currentEvent].id)"
     >
-      <p class="cursor-pointer">{{ showTitle() }}</p>
+      <p class="cursor-pointer" @click="emit('showEvent', props.events[currentEvent])">{{ showTitle() }}</p>
       <div class="flex gap-4">
         <button class="rounded-full" @click="emit('editEvent', props.events[currentEvent])">
           <font-awesome-icon icon="fa-pen-to-square"/>
@@ -33,7 +33,7 @@ const props = withDefaults(defineProps<Props>(), {
   events: () => []
 })
 
-const emit = defineEmits(['editEvent', 'dragStartEvent'])
+const emit = defineEmits(['editEvent', 'showEvent', 'dragStartEvent'])
 
 const currentEvent = ref(0)
 

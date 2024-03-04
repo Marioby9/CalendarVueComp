@@ -8,6 +8,7 @@
         <Day
           @addEvent="addEvent"
           @editEvent="editEvent"
+          @showEvent="showEvent"
           @dragStartEvent="dragStart"
           @dropEvent="dropEvent"
           :date="monthTable[i - 1][j]"
@@ -90,6 +91,12 @@ const addEvent = (date: string) => {
 
 const editEvent = (event: Event) => {
   modalState.value = 'edit'
+  modalEventEditing.value = event
+  openModal(event.date)
+}
+
+const showEvent = (event: Event) => {
+  modalState.value = 'show'
   modalEventEditing.value = event
   openModal(event.date)
 }
