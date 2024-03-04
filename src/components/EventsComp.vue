@@ -21,7 +21,7 @@
 </template>
   
 <script setup lang="ts">
-import { ref, withDefaults, defineProps, defineEmits } from 'vue'
+import { ref, withDefaults} from 'vue'
 import { deleteEvent } from '@/model/axios'
 import type Event from '@/interfaces/event'
 
